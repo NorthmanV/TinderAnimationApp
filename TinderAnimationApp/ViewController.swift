@@ -10,16 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var card: UIView!
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
+        let card = sender.view!
+        let point = sender.translation(in: view)
+        card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
+        if point.x > 0 {
+            imageView.image = #imageLiteral(resourceName: "star")
+            imageView.tintColor = .yellow
+        } else {
+            imageView.image = #imageLiteral(resourceName: "trash")
+            imageView.tintColor = .red
+        }
+        imageView.alpha = abs(point.x) / view.center.x
+        if sender.state == .ended {
+            UIView.animate(withDuration: 0.2) {
+                card.center = self.view.center
+                self.imageView.alpha = 0
+            }
+        }
     }
-
-
+    
 }
 

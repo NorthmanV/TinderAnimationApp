@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,84 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinderAnimationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gotham" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-O4-C2z">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-13-vGg">
+                                <rect key="frame" x="40" y="170" width="295" height="347"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Batman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-CY-Nio">
+                                        <rect key="frame" x="91" y="10" width="113" height="29"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="9wN-hK-nZo">
+                                        <rect key="frame" x="20" y="59" width="255" height="268"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="C7d-be-DBb">
+                                        <rect key="frame" x="62" y="108" width="170" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="GC5-p6-gL3"/>
+                                            <constraint firstAttribute="width" constant="170" id="Ns0-tS-O4O"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="9yM-CY-Nio" firstAttribute="centerX" secondItem="kiM-13-vGg" secondAttribute="centerX" id="G5e-UZ-plB"/>
+                                    <constraint firstItem="9yM-CY-Nio" firstAttribute="top" secondItem="kiM-13-vGg" secondAttribute="top" constant="10" id="Jnb-OL-NpS"/>
+                                    <constraint firstItem="C7d-be-DBb" firstAttribute="centerX" secondItem="9wN-hK-nZo" secondAttribute="centerX" id="QpS-H5-LKD"/>
+                                    <constraint firstItem="C7d-be-DBb" firstAttribute="centerY" secondItem="9wN-hK-nZo" secondAttribute="centerY" id="XT8-ug-kEJ"/>
+                                    <constraint firstItem="9wN-hK-nZo" firstAttribute="top" secondItem="9yM-CY-Nio" secondAttribute="bottom" constant="20" id="iKY-i4-o7b"/>
+                                    <constraint firstAttribute="trailing" secondItem="9wN-hK-nZo" secondAttribute="trailing" constant="20" id="oGQ-cv-3qR"/>
+                                    <constraint firstAttribute="bottom" secondItem="9wN-hK-nZo" secondAttribute="bottom" constant="20" id="pGv-Ae-URi"/>
+                                    <constraint firstItem="9wN-hK-nZo" firstAttribute="leading" secondItem="kiM-13-vGg" secondAttribute="leading" constant="20" id="t7f-bz-tQj"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0H5-TV-8B5" appends="YES" id="YTS-WP-by7"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oca-O4-C2z" secondAttribute="bottom" id="9Nw-CM-Ght"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oca-O4-C2z" secondAttribute="trailing" id="SUz-3K-vT1"/>
+                            <constraint firstItem="kiM-13-vGg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Vpu-HC-oEt"/>
+                            <constraint firstItem="kiM-13-vGg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Waa-qp-5x9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kiM-13-vGg" secondAttribute="trailing" constant="40" id="Xnv-wm-E7q"/>
+                            <constraint firstItem="kiM-13-vGg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bRI-Yg-zvz"/>
+                            <constraint firstItem="Oca-O4-C2z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gQc-4E-eI0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kiM-13-vGg" secondAttribute="bottom" constant="150" id="mBk-iU-HNC"/>
+                            <constraint firstItem="Oca-O4-C2z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ocR-6D-QiL"/>
+                            <constraint firstItem="kiM-13-vGg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="yFg-xE-Xm3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="card" destination="kiM-13-vGg" id="TNd-R4-lyW"/>
+                        <outlet property="imageView" destination="C7d-be-DBb" id="GCK-vw-kUL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="0H5-TV-8B5">
+                    <connections>
+                        <action selector="panCard:" destination="BYZ-38-t0r" id="iNB-vj-enY"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="batman" width="443" height="640"/>
+        <image name="gotham" width="1988" height="1262"/>
+        <image name="star" width="400" height="400"/>
+    </resources>
 </document>
