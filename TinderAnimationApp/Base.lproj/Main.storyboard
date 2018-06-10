@@ -57,6 +57,16 @@
                                     <outletCollection property="gestureRecognizers" destination="0H5-TV-8B5" appends="YES" id="YTS-WP-by7"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCI-aq-pVk">
+                                <rect key="frame" x="165.5" y="615" width="44" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYm-ju-WXo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -66,7 +76,9 @@
                             <constraint firstItem="kiM-13-vGg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Waa-qp-5x9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kiM-13-vGg" secondAttribute="trailing" constant="40" id="Xnv-wm-E7q"/>
                             <constraint firstItem="kiM-13-vGg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bRI-Yg-zvz"/>
+                            <constraint firstItem="eCI-aq-pVk" firstAttribute="centerX" secondItem="Oca-O4-C2z" secondAttribute="centerX" id="fls-RH-Pj2"/>
                             <constraint firstItem="Oca-O4-C2z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gQc-4E-eI0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eCI-aq-pVk" secondAttribute="bottom" constant="16" id="j4o-0m-jPq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kiM-13-vGg" secondAttribute="bottom" constant="150" id="mBk-iU-HNC"/>
                             <constraint firstItem="Oca-O4-C2z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ocR-6D-QiL"/>
                             <constraint firstItem="kiM-13-vGg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="yFg-xE-Xm3"/>
